@@ -21,7 +21,11 @@ public class SteamVR_UpdatePoses : MonoBehaviour
 		camera.depth = -9999;
 	}
 #endif
-	void OnPreCull()
+
+    /**
+     * Modified to resolve UI tracking issue: https://issuetracker.unity3d.com/issues/vr-canvas-lags-behind-when-attached-to-a-controller
+     */
+	void LateUpdate()
 	{
 		var compositor = OpenVR.Compositor;
 		if (compositor != null)
@@ -33,4 +37,3 @@ public class SteamVR_UpdatePoses : MonoBehaviour
 		}
 	}
 }
-
