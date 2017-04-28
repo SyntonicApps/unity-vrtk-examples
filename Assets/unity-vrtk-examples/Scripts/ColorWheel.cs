@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using VRTK;
 
 public class ColorWheel : MonoBehaviour {
 
 	public GameObject colorCube;
+	private float hue, saturation, value = 1f;
+
+	private GameObject blackWheel;
+	private GameObject indicator;
 
 	// Use this for initialization
 	void Start () {
@@ -14,23 +19,43 @@ public class ColorWheel : MonoBehaviour {
 			return;
 		}
 
+		blackWheel = transform.Find ("CanvasHolder/Canvas/BlackWheel").gameObject;
+		indicator = transform.Find ("CanvasHolder/Canvas/Indicator").gameObject;
+
 		GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += new ControllerInteractionEventHandler(DoTouchpadAxisChanged);
 	}
 
 	private void DoTouchpadAxisChanged(object sender, ControllerInteractionEventArgs e) {
-		ChangeColor (e.touchpadAxis, e.touchpadAngle);
+		indicator.transform.localPosition = new Vector3 (e.touchpadAxis.x / 2, -e.touchpadAxis.y / 2, indicator.transform.localPosition.z);
+
+		if (GetComponent<VRTK_ControllerEvents> ().touchpadPressed) {
+			ChangedValue (e.touchpadAxis);
+		} else {
+			ChangedHueSaturation (e.touchpadAxis, e.touchpadAngle);
+		}
 	}
 
-	private void ChangeColor(Vector2 touchpadAxis, float touchpadAngle) {
+	private void ChangedValue(Vector2 touchpadAxis) {
+		Debug.Log ("ChangeValue: Trackpad axis at: " + touchpadAxis);
+
+		this.value = (touchpadAxis.y + 1) / 2;
+		Color currColor = blackWheel.GetComponent<Image> ().color;
+		currColor.a = 1 - this.value;
+		blackWheel.GetComponent<Image> ().color = currColor;
+
+		UpdateColor ();
+	}
+
+	private void ChangedHueSaturation(Vector2 touchpadAxis, float touchpadAngle) {
 		float normalAngle = touchpadAngle - 90;
 		if (normalAngle < 0)
 			normalAngle = 360 + normalAngle;
 		
-		Debug.Log ("Trackpad axis at: " + touchpadAxis + " (" + normalAngle + " degrees)");
+		Debug.Log ("ChangeColor: Trackpad axis at: " + touchpadAxis + " (" + normalAngle + " degrees)");
 
-		float rads = touchpadAngle * Mathf.PI / 180;
-		float maxX = Mathf.Sin (rads);
-		float maxY = Mathf.Cos (rads);
+		float rads = normalAngle * Mathf.PI / 180;
+		float maxX = Mathf.Cos (rads);
+		float maxY = Mathf.Sin (rads);
 
 		float currX = touchpadAxis.x;
 		float currY = touchpadAxis.y;
@@ -38,10 +63,14 @@ public class ColorWheel : MonoBehaviour {
 		float percentX = Mathf.Abs (currX / maxX);
 		float percentY = Mathf.Abs (currY / maxY);
 
-		float saturation = (percentX + percentY) / 2;
+		this.hue = normalAngle / 360.0f;
+		this.saturation = (percentX + percentY) / 2;
 
-		Color color = Color.HSVToRGB(normalAngle / 360.0f, saturation, 1.0f);
+		UpdateColor ();
+	}
 
+	private void UpdateColor() {
+		Color color = Color.HSVToRGB(this.hue, this.saturation, this.value);
 		colorCube.GetComponent<Renderer>().material.color = color;
 	}
 }
