@@ -10,7 +10,6 @@ public class ColorWheel : MonoBehaviour {
 	private float hue, saturation, value = 1f;
 
 	private GameObject blackWheel;
-	private GameObject indicator;
 
 	// Use this for initialization
 	void Start () {
@@ -20,15 +19,12 @@ public class ColorWheel : MonoBehaviour {
 		}
 
 		blackWheel = transform.Find ("CanvasHolder/Canvas/BlackWheel").gameObject;
-		indicator = transform.Find ("CanvasHolder/Canvas/Indicator").gameObject;
 
 		GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += new ControllerInteractionEventHandler(DoTouchpadAxisChanged);
 	}
 
 	private void DoTouchpadAxisChanged(object sender, ControllerInteractionEventArgs e) {
-		indicator.transform.localPosition = new Vector3 (e.touchpadAxis.x / 2, -e.touchpadAxis.y / 2, indicator.transform.localPosition.z);
-
-		if (GetComponent<VRTK_ControllerEvents> ().touchpadPressed) {
+		if (GetComponent<VRTK_ControllerEvents> ().triggerPressed) {
 			ChangedValue (e.touchpadAxis);
 		} else {
 			ChangedHueSaturation (e.touchpadAxis, e.touchpadAngle);
