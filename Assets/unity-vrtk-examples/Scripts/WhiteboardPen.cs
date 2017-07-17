@@ -16,7 +16,7 @@ public class WhiteboardPen : VRTK_InteractableObject {
 		// Get our Whiteboard component from the whiteboard object
 		this.whiteboard = GameObject.Find("Whiteboard").GetComponent<Whiteboard>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		float tipHeight = transform.Find ("Tip").transform.localScale.y;
@@ -31,6 +31,7 @@ public class WhiteboardPen : VRTK_InteractableObject {
 		// Check for a Raycast from the tip of the pen
 		if (Physics.Raycast (tip, transform.up, out touch, tipHeight)) {
 			if (!(touch.collider.tag == "Whiteboard")) return;
+    		this.whiteboard = touch.collider.GetComponent<Whiteboard>();
 
 			// Give haptic feedback when touching the whiteboard
 			controllerActions.TriggerHapticPulse (0.05f);
