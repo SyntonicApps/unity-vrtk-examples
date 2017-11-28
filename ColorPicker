@@ -1,0 +1,36 @@
+SampleExample TouchPad Color Picker
+
+두번째 예제샘플인 TouchPad Color Picker은 HTC VIve(SteamVR) 기기의 컨트롤러의 
+터치패드의 좌표값을 받아온후 연산을 하여 HSV 색깔좌표의 값으로 받아와서 RGB색으로 변환
+하여 오브젝트에 적용을 시킨다.
+
+private void ChagedHueSaturation(Vector2 touchpadAxis, float touchpadAngle)
+        {
+            float normalAngle = touchpadAngle - 90;
+            if (normalAngle < 0)
+                normalAngle = 360 + normalAngle;
+           // Debug.Log("ChagedHueSaturation" + touchpadAxis + "   " + normalAngle);
+            float rads = normalAngle * Mathf.PI / 180;
+            float maxX = Mathf.Cos(rads);
+            float maxY = Mathf.Sin(rads);
+
+            float currX = touchpadAxis.x;
+            float currY = touchpadAxis.y;
+
+            float percentX = Mathf.Abs(currX / maxX);
+            float percentY = Mathf.Abs(currY / maxY);
+
+            this.hue = normalAngle / 360.0f;
+            this.saturation = (percentX + percentY) / 2;
+
+            //Debug.Log(this.hue + " " + this.saturation);
+
+            UpdateColor();
+        }
+
+        private void UpdateColor()
+        {
+            Color color = Color.HSVToRGB(this.hue, this.saturation, this.value);
+            colorCube.GetComponent<Renderer>().material.color = color;
+            Menu_Object_Spawner.SelectObj.GetComponent<Renderer>().material.color = color	
+    	}
