@@ -1,2 +1,4 @@
 # unity-vrtk-example
-# run main.tex
+# Run main.tex
+# Or
+# Run OpenSource_Project (1).pdf
