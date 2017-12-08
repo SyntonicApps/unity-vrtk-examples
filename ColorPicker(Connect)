@@ -1,0 +1,37 @@
+       VRTK의 컨트롤러 함수를 참조해서 터치패드 좌표 X,Y와 트리거 버튼을 가져온다.
+      
+       void Start() {
+            if (GetComponent<VRTK_ControllerEvents>() == null)
+            {
+                Debug.LogError("canvas Error");
+                return;
+            }
+            blackWheel = transform.Find("CanvasHolder/Canvas/BlackWheel").gameObject;
+            GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += new ControllerInteractionEventHandler(DoTouchpadAxisChanged);
+        }
+
+
+        private void DoTouchpadAxisChanged(object sender, ControllerInteractionEventArgs e)
+        {
+            if (GetComponent<VRTK_ControllerEvents>().triggerPressed)
+            {
+                ChangedValue(e.touchpadAxis);
+
+            }
+            else
+            {
+                ChagedHueSaturation(e.touchpadAxis, e.touchpadAngle);
+            }
+            ChagedHueSaturation(e.touchpadAxis, e.touchpadAngle);
+        }
+
+        private void ChangedValue(Vector2 touchpadAxis)
+        {
+            this.value = (touchpadAxis.y + 1) / 2;
+            Color currColor = blackWheel.GetComponent<Image>().color;
+            currColor.a = 1 - this.value;
+            blackWheel.GetComponent<Image>().color = currColor;
+
+            UpdateColor();
+
+        }
