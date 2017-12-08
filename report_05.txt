@@ -1,0 +1,15 @@
+HTC VIVE의 CameraRig에 각각의 left 와 right의 Controller이 기본 prefab으로 있음
+
+Headset에 Backpack을, Controller에 Sword를 주는것임
+
+VIVE의 CameraRig의 Controller를 VRTK의 Controller로 사용
+
+VRTK의 VRTK_Interact Touch와 VRTK_Interact Grab을 사용
+
+이를 CreateEmpty 를 생성해서 Headset으로 주고, Transfrom Follow로 주고, Foller를 eye로 설정
+
+그리고 Backpack에 OnTriggerStay를 주고, InteractGrabdmf Collider로 줘서 사용
+
+또한, Sword라는 스크립트를 추가하여, 이후 Controller grap시 Sword생성,
+
+Grab해제 시 해당 Sword prefab은 rigidbody에 의해 땅으로 떨어지며, 다시 grab시 새로운 sword clone prefab이 생성.
