@@ -1,0 +1,186 @@
+Initialize engine version: 5.6.5f1 (2cac56bf7bb6)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940MX (ID=0x134d)
+    Vendor:   NVIDIA
+    VRAM:     2020 MB
+    Driver:   23.21.13.8831
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\GETween.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\GETween.dll into Unity Child Domain
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\GUIAnimatorFREE.dll (this message is harmless)
+Loading C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\GUIAnimatorFREE.dll into Unity Child Domain
+- Completed reload, in  0.032 seconds
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\cesc-\OneDrive\바탕 화면\colorpicker_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 2.859060 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 1a44 -> priority: 1 
+  Thread -> id: 1b18 -> priority: 1 
+  Thread -> id: 2cb8 -> priority: 1 
+  Thread -> id: 2d2c -> priority: 1 
+The referenced script on this Behaviour (Game Object 'AppButtonOutside') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object '_UIRaycaster') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'hand_right') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'GvrViewerMain') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'base') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'LeftController') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'GvrControllerMain') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'GvrControllerMain') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'OVRCameraRig') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'OVRCameraRig') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'TouchPadOutside') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'body') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'GvrControllerPointer') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'RightHandAnchor') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'RightHandAnchor') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'controller_left') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'hand_left') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'Controller') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'LocalAvatar') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'LocalAvatar') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'controller_right') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'VRCameraRig') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'LeftHandAnchor') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'LeftHandAnchor') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'TouchPadInside') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object '_UIRaycaster') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object '_PlayArea') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'AppButtonInside') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object 'ddcontroller') is missing!
+ 
+(Filename:  Line: 1744)
+
+The referenced script on this Behaviour (Game Object '_UIRaycaster') is missing!
+ 
+(Filename:  Line: 1744)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.617380 ms
+Ignoring SDK Setup 'Daydream' because there are some errors with it:
+- The vendor SDK for 'Daydream' is not installed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Ignoring SDK Setup 'OculusVR' because there are some errors with it:
+- The vendor SDK for 'Oculus' is not installed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Ignoring SDK Setup 'XimmerseVR (Oculus)' because there are some errors with it:
+- The vendor SDK for 'Ximmerse (Oculus)' is not installed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1665.
+Total: 1.012937 ms (FindLiveObjects: 0.127999 ms CreateObjectMapping: 0.061234 ms MarkObjects: 0.803950 ms  DeleteObjects: 0.018962 ms)
+
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_Init_PathRegistryNotFound: "Installation path could not be located (110)"!
+ 
+(Filename:  Line: 1028)
+
